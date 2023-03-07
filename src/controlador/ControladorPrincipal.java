@@ -31,7 +31,7 @@ public class ControladorPrincipal implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource() == frmPrincipal.getBtnUsuarios()) {
 			AccesoBBDD ab = new AccesoBBDD();
-			vista.PanelUsuario panelU = new PanelUsuario();
+			vista.PanelUsuario panelU = new PanelUsuario(frmPrincipal, 	false);
 			controladorUsuario cu = new controladorUsuario(ab,panelU);
 			cu.inicializar();
 			panelU.setVisible(true);

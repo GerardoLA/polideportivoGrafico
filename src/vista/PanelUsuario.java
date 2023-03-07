@@ -1,13 +1,15 @@
 package vista;
 
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 public class PanelUsuario extends JDialog {
-	private final JPanel contentpanel = new JPanel();
+	private final JPanel contentPanel ;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -18,8 +20,14 @@ public class PanelUsuario extends JDialog {
 	
 	
 	
-	public PanelUsuario() {
-		getContentPane().setLayout(null);
+	public PanelUsuario(JFrame padre,boolean modal) {
+		super(padre,modal);
+		setBounds(100,1001,690,319);
+		contentPanel = new JPanel();
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel,BorderLayout.CENTER);
+		contentPanel.setLayout(null);
 		
 		JLabel lblNombreApellido = new JLabel("Nombre_Apellido");
 		lblNombreApellido.setBounds(43, 67, 111, 22);
