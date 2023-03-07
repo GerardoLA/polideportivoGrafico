@@ -3,8 +3,10 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import modelo.AccesoBBDD;
 import vista.PanelUsuario;
 import vista.Principal;
+
 
 
 public class ControladorPrincipal implements ActionListener{
@@ -13,7 +15,9 @@ public class ControladorPrincipal implements ActionListener{
 	
 	public ControladorPrincipal(Principal principal) {
 		frmPrincipal = principal;
-		frmPrincipal.btnUsuarios.addActionListener(this);
+		frmPrincipal.getBtnUsuarios().addActionListener(this);
+		frmPrincipal.getBtnInscripciones().addActionListener(this);
+		frmPrincipal.getBtnActividades().addActionListener(this);
 	}
 
 	public void inicializar() {
@@ -25,8 +29,22 @@ public class ControladorPrincipal implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(e.getSource() == frmPrincipal.btnUsuarios) {
+		if(e.getSource() == frmPrincipal.getBtnUsuarios()) {
+			AccesoBBDD ab = new AccesoBBDD();
 			vista.PanelUsuario panelU = new PanelUsuario();
+			
 		}
-} 
+}
+	
+	
+//	public void actionPerformed(ActionEvent e) {
+//		if(e.getSource() == frmPrincipal.btnGestionarProductos) {
+//			ProductoModelo productoM = new ProductoModelo();
+//			vista.ProductoFormulario productoF = new ProductoFormulario(frmPrincipal, true);
+//			
+//			ControladorProducto productoC = new ControladorProducto(productoM, productoF);
+//			productoC.inicializar();
+//			productoF.setVisible(true);
+//		}
+//	}
 	}
