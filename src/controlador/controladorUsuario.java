@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import modelo.AccesoBBDD;
+import vista.PanelUsuario;
 
 public class controladorUsuario implements ActionListener,MouseListener{
 	
@@ -13,6 +14,14 @@ public class controladorUsuario implements ActionListener,MouseListener{
 	private vista.PanelUsuario panelUsuario;
 	
 	
+	
+	public controladorUsuario(AccesoBBDD abd, PanelUsuario panelUsuario) {
+		this.panelUsuario=panelUsuario;
+		this.abd = abd;
+		
+		
+		
+	}
 	
 	public void inicializar() {
 		this.panelUsuario.setTitle("Usuarios");

@@ -12,9 +12,9 @@ import java.awt.Color;
 
 public class Principal extends JFrame{
 	private JPanel contentPane;
-	private JButton btnUsuarios;
-	private JButton btnInscripciones;
-	private JButton btnActividades;
+	JButton btnUsuarios;
+	JButton btnInscripciones;
+	JButton btnActividades;
 	
 	public Principal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

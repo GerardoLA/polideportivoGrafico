@@ -32,6 +32,9 @@ public class ControladorPrincipal implements ActionListener{
 		if(e.getSource() == frmPrincipal.getBtnUsuarios()) {
 			AccesoBBDD ab = new AccesoBBDD();
 			vista.PanelUsuario panelU = new PanelUsuario();
+			controladorUsuario cu = new controladorUsuario(ab,panelU);
+			cu.inicializar();
+			panelU.setVisible(true);
 			
 		}
 }
