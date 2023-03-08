@@ -13,9 +13,6 @@ public class PanelUsuario extends JDialog {
 	private JTextField nombreText;
 	private JTextField idText;
 	private JTextField dniText;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField;
 	private JTextField codigoText;
 	
 	
@@ -63,21 +60,6 @@ public class PanelUsuario extends JDialog {
 		JLabel lblCodigo = new JLabel("Código : ");
 		lblCodigo.setBounds(43, 168, 46, 14);
 		getContentPane().add(lblCodigo);
-		
-		textField_3 = new JTextField();
-		textField_3.setBounds(0, 0, 674, 280);
-		getContentPane().add(textField_3);
-		textField_3.setColumns(10);
-		
-		textField_4 = new JTextField();
-		textField_4.setBounds(190, 165, 142, 20);
-		getContentPane().add(textField_4);
-		textField_4.setColumns(10);
-		
-		textField = new JTextField();
-		textField.setBounds(190, 165, 142, 20);
-		getContentPane().add(textField);
-		textField.setColumns(10);
 		
 		codigoText = new JTextField();
 		codigoText.setBounds(190, 165, 142, 20);
